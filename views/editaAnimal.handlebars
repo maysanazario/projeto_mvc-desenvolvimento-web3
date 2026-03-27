@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Editar Informações do Animal</h1>
+    <form action="/animais/{{animal.id}}/editar" method="post">
+    <label for="especie">Espécie:</label>
+    <input type="text" name="especie" id="especie" value="{{animal.especie}}" required>
+    <label>
+        <input type="checkbox" name="vacinado" {{#if animal.vacinado}}checked{{/if}}> Vacinado
+    </label>
+    <button type="submit">Salvar</button>
+    </form>
+</div>

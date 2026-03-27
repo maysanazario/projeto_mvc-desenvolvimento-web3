@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Lista de Animais</h1>
+    <a href="/animais/adicionar" class="btn">Adicionar Novo Animal</a>
+    <ul>
+        {{#each animais}}
+        <li>
+            {{especie}} - {{#if vacinado}}Vacinado{{else}}Pendente{{/if}}
+            <a href="/animais/{{id}}/editar">Editar</a>
+            <a href="/animais/{{id}}/excluir">Excluir</a>
+        </li>
+        {{/each}}
+    </ul>
+</div>
